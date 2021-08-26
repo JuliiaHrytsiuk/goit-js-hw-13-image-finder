@@ -12,22 +12,14 @@ const picturesApiService = new PicturesApiServices();
 refs.searchForm.addEventListener('submit', onSearch);
 refs.loadMoreBtn.addEventListener('click', onLoadMore);
 
-var searchQuery = '';
-
 function onSearch(event) {
   event.preventDefault();
 
-  searchQuery = event.currentTarget.elements.query.value;
+  picturesApiService.query = event.currentTarget.elements.query.value;
 
-  picturesApiService.fetchPictures(searchQuery);
+  picturesApiService.fetchPictures();
 }
 
 function onLoadMore() {
-  picturesApiService.fetchPictures(searchQuery);
+  picturesApiService.fetchPictures();
 }
-
-// const element = document.getElementById('.my-element-selector');
-// element.scrollIntoView({
-//   behavior: 'smooth',
-//   block: 'end',
-// });
