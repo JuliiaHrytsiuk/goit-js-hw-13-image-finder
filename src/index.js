@@ -5,7 +5,6 @@ import LoadMoreBtn from './js/components/loadMoreBtn';
 import onOpenModalImage from './js/components/modal';
 import scrollIntoView from './js/components/scroll';
 import error from './js/components/notify';
-import 'basiclightbox/dist/basiclightbox.min.css';
 
 const refs = {
   searchForm: document.querySelector('#search-form'),
