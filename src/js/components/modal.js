@@ -1,6 +1,3 @@
-import * as basicLightbox from 'basiclightbox';
-import 'basiclightbox/dist/basiclightbox.min.css';
-
 export default function onOpenModalImage(event) {
   const largeImageURL = event.target.getAttribute('data-large-image-url');
 
